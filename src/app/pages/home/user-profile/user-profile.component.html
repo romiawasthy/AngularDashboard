@@ -1,116 +1,99 @@
 <div class="main-content">
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header" data-background-color="red">
-                    <h4 class="title">Edit Profile</h4>
-                    <p class="category">Complete your profile</p>
-                </div>
-                <div class="card-content">
-                    <form>
-                        <div class="row">
-                            <div class="col-md-5">
-                                <div class="form-group form-black label-floating is-empty">
-                                    <label class="control-label">Company (disabled)</label>
-                                    <input type="text" class="form-control" disabled>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group form-black label-floating is-empty">
-                                    <label class="control-label">Username</label>
-                                    <input type="text" class="form-control" >
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group form-black label-floating is-empty">
-                                    <label class="control-label">Email address</label>
-                                    <input type="email" class="form-control" >
-                                </div>
-                            </div>
-                        </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group form-black label-floating is-empty">
-                                    <label class="control-label">Fist Name</label>
-                                    <input type="text" class="form-control" >
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group form-black label-floating is-empty">
-                                    <label class="control-label">Last Name</label>
-                                    <input type="text" class="form-control" >
-                                </div>
-                            </div>
-                        </div>
+                <div class="card">
+                    <div class="card-header" data-background-color="red">
+                        <h4 class="title">Retention Policies</h4>
+                        <p class="category"></p>
 
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group form-black label-floating is-empty">
-                                    <label class="control-label">Adress</label>
-                                    <input type="text" class="form-control" >
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                    <div class="card-content table-responsive">
+                        <table class="table">
+                            <thead class="text-danger">
+                                <tr>
+                                    <th>RecordClass</th>
+                                    <th>Description</th>
+                                    <th>Policy</th>
+                                    <th>AppliedTo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Employment Tax Records.</td>
+                                    <td>Employment Tax Records.</td>
+                                    <td> retain minimum 4yrs after the date those taxes were due or were paid</td>
 
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group form-black label-floating is-empty">
-                                    <label class="control-label">City</label>
-                                    <input type="text" class="form-control" >
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group form-black label-floating is-empty">
-                                    <label class="control-label">Country</label>
-                                    <input type="text" class="form-control" >
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group form-black label-floating is-empty">
-                                    <label class="control-label">Postal Code</label>
-                                    <input type="text" class="form-control" >
-                                </div>
-                            </div>
-                        </div>
+                                    <td class="text-danger"><a href=''>EmployeeTaxRecords</a></td>
+                                </tr>
+                                 <tr>
+                                    <td>job applicants.</td>
+                                    <td>job applicants</td>
+                                    <td> at least 3 years</td>
 
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label>About Me</label>
-                                    <div class="form-group form-black label-floating is-empty">
-                                        <label class="control-label"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
-                                        <textarea class="form-control" rows="5"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                    <td class="text-danger"><p><a href=''>job applicants who were not eventually hired</a></p>
+                                    <p><a href=''>Cancelled checks</a></p>
+                                    <p><a href=''>Credit card statements</a></p>
+                                    </td>
+                                </tr>
 
-                        <button type="submit" class="btn btn-danger pull-right">Update Profile</button>
-                        <div class="clearfix"></div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card card-profile">
-                <div class="card-avatar">
-                    <a href="#pablo">
-                        <img class="img" src="../assets/img/faces/marc.jpg" />
-                    </a>
+                                <tr>
+                                    <td>Default</td>
+                                    <td>default</td>
+                                    <td> at least 7 years</td>
+
+                                    <td class="text-danger"><p><a href=''>HRDocs of employees who have left</a></p>
+                                    <a href=''>HRDocs of employee has suffered an accident on the job</a></td>
+                                </tr>
+
+                                 <tr>
+                                    <td>Permanent Retention</td>
+                                    <td></td>
+                                    <td>Permanently</td>
+
+                                    <td class="text-danger"><p><a href=''>pension payment documents</a></p>
+                                    <p><a href=''>employee benefit documents</a></p>
+                                     <a href=''>final copy of your business income tax returns</a></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
                 </div>
 
-                <div class="content">
-                    <h6 class="category text-gray">CEO / Co-Founder</h6>
-                    <h4 class="card-title">Alec Thompson</h4>
-                    <p class="card-content">
-                        Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-                    </p>
-                    <a href="#pablo" class="btn btn-danger btn-round">Follow</a>
+                  <div class="card">
+                    <div class="card-header" data-background-color="red">
+                        <h4 class="title">Governance Policies</h4>
+                        <p class="category"></p>
+
+                    </div>
+                    <div class="card-content table-responsive">
+                        <table class="table">
+                            <thead class="text-danger">
+                                <tr>
+                                    <th>Policy</th>
+                                    <th>Description</th>
+
+                                    <th>AppliedTo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>OnPremise storage</td>
+                                    <td>cannot be stored on the cloud</td>
+
+
+                                    <td class="text-danger"><a href=''>PII documents</a></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+
+
 </div>
