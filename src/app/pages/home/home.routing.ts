@@ -19,16 +19,16 @@ import { ImageListComponent } from './image-list/image-list.component';
 const routes: Routes =[
   { path: 'home',  component: HomeComponent,
       children: [
-      { path: 'dashboard',      component: DashboardComponent },
+
       { path: 'search',         component: ImageListComponent },
-      { path: 'search',         component: TableListComponent },
+      { path: 'metadata',         component: TypographyComponent },
       { path: 'user-profile',   component: UserProfileComponent },
       { path: 'table-list',     component: TableListComponent },
-      { path: 'typography',     component: TypographyComponent },
       { path: 'icons',          component: IconsComponent },
       { path: 'maps',           component: MapsComponent },
       { path: 'notifications',  component: NotificationsComponent },
       { path: 'upgrade',        component: UpgradeComponent },
+       { path: 'dashboard',      component: DashboardComponent },
     ]
   }
 ];

@@ -1,80 +1,43 @@
 <div class="main-content">
-    <div class="container-fluid">
-        <div class="row">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-md-12">
+            <md-card>
+               <md-input-container>
+                  <input class="search" mdinput [(ngModel)]="searchQuery" name="search" placeholder="Search for images">
+               </md-input-container>
+               <br>
+               <button (click)="searchImages(searchQuery)" md-raised-button class="searchButton" type="button">Search</button>
+               <button md-raised-button class="searchButton">Advance Search</button>
 
 
-            <div class="col-md-12">
-                <div class="card card-plain">
-                    <div class="card-header" data-background-color="red">
-                        <h4 class="title">Document List</h4>
-                        <p class="category"> <select md-raised-button class="searchButton">
+            </md-card>
+            <h4 *ngIf="imagesFound" md-subeader>
+               Results
+            </h4>
+            <table datatable class="table row-border hover" *ngIf="imagesFound">
 
-                        <option>Mary's Documents'</option>
-                        <option>SalaryDocuments</option>
-                        <option>F</option>
-                        <option>5</option>
-                    </select></p>
-                    </div>
+               <tr class="row" *ngFor="let image of images">
 
-                    <div class="card-content table-responsive">
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Salary</th>
-                                    <th>Country</th>
-                                    <th>City</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Dakota Rice</td>
-                                    <td>$36,738</td>
-                                    <td>Niger</td>
-                                    <td>Oud-Turnhout</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Minerva Hooper</td>
-                                    <td>$23,789</td>
-                                    <td>Curaçao</td>
-                                    <td>Sinaai-Waas</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Sage Rodriguez</td>
-                                    <td>$56,142</td>
-                                    <td>Netherlands</td>
-                                    <td>Baileux</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Philip Chaney</td>
-                                    <td>$38,735</td>
-                                    <td>Korea, South</td>
-                                    <td>Overland Park</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Doris Greene</td>
-                                    <td>$63,542</td>
-                                    <td>Malawi</td>
-                                    <td>Feldkirchen in Kärnten</td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>Mason Porter</td>
-                                    <td>$78,615</td>
-                                    <td>Chile</td>
-                                    <td>Gloucester</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                  <td>
+                     <a href="{{ image.pageURL }}" target="_bank">
+                        <div class="avatar" md-card-avatar [ngStyle]="{'background-image':'url('+ image.webformatURL +')', 'background-size':'40px 40px'}"> </div>
+                     </a>
+                  </td>
+                  <td><a href=''>{{image.id }}</a></td>
+                  <td>{{image.tags }}</td>
+                  <td>
+                     <select md-raised-button >
+                        <option>Action</option>
+                        <option>Download</option>
+                         <option>Edit Physical Metadata</option>
+                        <option>Edit Digital Metadata</option>
+                        <option>Place an Order</option>
+                     </select>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+   </div>
 </div>
